@@ -639,8 +639,4 @@ const attendanceData = {
   "Advanced Control System": { attended: 0, total: 0 },
   "Professional Ethics in Engineering": { attended: 0, total: 0 }
 }
-
-
-
-  // Add more roll numbers up to 72 as needed
 };
