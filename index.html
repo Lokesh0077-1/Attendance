@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Color Attendance App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showDateTime()">
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggle" onclick="toggleTheme()">🌞 Light</button>
+
+  <!-- WELCOME PAGE -->
+  <div id="welcomePage" class="page" style="display:block;">
+    <header>
+      <h1>Welcome to Attendance App</h1>
+      <p id="datetime"></p>
+      <div class="btn-group">
+        <button onclick="showPage('rollPage')">Enter Roll Number</button>
+      </div>
+    </header>
+  </div>
+
+  <!-- ROLL INPUT PAGE -->
+  <div id="rollPage" class="page">
+    <div class="roll-card">
+      <h2>Enter Your Roll Number</h2>
+      <input type="text" id="rollNumber" placeholder="e.g. 12303001">
+      <div class="btn-group">
+        <button onclick="submitRollNumber()">Submit</button>
+        <button onclick="showPage('welcomePage')">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ATTENDANCE PAGE -->
+  <div id="attendancePage" class="page">
+    <div class="container">
+      <h2>Attendance Details</h2>
+      <div id="attendanceInfo"></div>
+      <div class="btn-group">
+        <button onclick="showPage('rollPage')">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

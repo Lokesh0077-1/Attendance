@@ -1,0 +1,293 @@
+/* ===== CSS Variables for Theming ===== */
+:root {
+  --bg-primary: hsl(220, 20%, 97%);
+  --bg-secondary: hsl(0, 0%, 100%);
+  --text-primary: hsl(220, 25%, 15%);
+  --text-secondary: hsl(220, 10%, 45%);
+  --accent: hsl(230, 70%, 55%);
+  --accent-light: hsl(230, 70%, 95%);
+  --border: hsl(220, 15%, 88%);
+  --shadow: hsla(220, 40%, 15%, 0.08);
+  --success: hsl(150, 60%, 40%);
+  --warning: hsl(40, 90%, 50%);
+  --danger: hsl(0, 70%, 55%);
+  --radius: 12px;
+}
+
+.dark-mode {
+  --bg-primary: hsl(225, 25%, 12%);
+  --bg-secondary: hsl(225, 20%, 18%);
+  --text-primary: hsl(220, 20%, 95%);
+  --text-secondary: hsl(220, 15%, 65%);
+  --accent: hsl(230, 80%, 65%);
+  --accent-light: hsl(230, 50%, 25%);
+  --border: hsl(225, 15%, 28%);
+  --shadow: hsla(0, 0%, 0%, 0.3);
+}
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+
+/* ===== Theme Toggle ===== */
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 50px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px var(--shadow);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#themeToggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+/* ===== Page Layout ===== */
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 60px 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Welcome Page ===== */
+header {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 40px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px var(--shadow);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--accent), hsl(280, 70%, 55%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#datetime {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* ===== Buttons ===== */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: var(--accent);
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px hsla(230, 70%, 55%, 0.35);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.btn-group button:last-child:not(:first-child) {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+}
+
+.btn-group button:last-child:not(:first-child):hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  box-shadow: none;
+}
+
+/* ===== Roll Card ===== */
+.roll-card {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px var(--shadow);
+  text-align: center;
+}
+
+.roll-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: var(--text-primary);
+}
+
+.roll-card input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.25s ease;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.roll-card input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.roll-card input::placeholder {
+  color: var(--text-secondary);
+  letter-spacing: normal;
+}
+
+/* ===== Attendance Container ===== */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px var(--shadow);
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: var(--text-primary);
+}
+
+/* ===== Attendance Table ===== */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.attendance-table th {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.attendance-table tr {
+  transition: background 0.2s ease;
+}
+
+.attendance-table tr:hover {
+  background: var(--accent-light);
+}
+
+.attendance-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== Attendance Status Colors ===== */
+.attendance-table tr.high td:last-child {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.attendance-table tr.medium td:last-child {
+  color: var(--warning);
+  font-weight: 700;
+}
+
+.attendance-table tr.low td:last-child {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+/* ===== Overall Card ===== */
+.attendance-card {
+  background: linear-gradient(135deg, var(--accent), hsl(280, 70%, 55%));
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 8px 25px hsla(230, 70%, 55%, 0.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  header, .roll-card, .container {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
