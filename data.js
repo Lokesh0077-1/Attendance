@@ -129,14 +129,7 @@ const attendanceData = {
   "Professional Ethics in Engineering": { attended: 0, total: 0 }
 },
 
-"12303016": {
-  "Power System Analysis": { attended: 0, total: 0 },
-  "Electrical and Electronics Measurements": { attended: 0, total: 0 },
-  "Micro Processors and Micro Controllers": { attended: 0, total: 0 },
-  "Utilisation of Electrical Power": { attended: 0, total: 0 },
-  "Advanced Control System": { attended: 0, total: 0 },
-  "Professional Ethics in Engineering": { attended: 0, total: 0 }
-},
+
 
 "12303017": {
   "Power System Analysis": { attended: 0, total: 0 },
@@ -317,14 +310,6 @@ const attendanceData = {
   "Professional Ethics in Engineering": { attended: 0, total: 0 }
 },
 
-"12303037": {
-  "Power System Analysis": { attended: 0, total: 0 },
-  "Electrical and Electronics Measurements": { attended: 0, total: 0 },
-  "Micro Processors and Micro Controllers": { attended: 0, total: 0 },
-  "Utilisation of Electrical Power": { attended: 0, total: 0 },
-  "Advanced Control System": { attended: 0, total: 0 },
-  "Professional Ethics in Engineering": { attended: 0, total: 0 }
-},
 
 "12303038": {
   "Power System Analysis": { attended: 0, total: 0 },
@@ -335,14 +320,7 @@ const attendanceData = {
   "Professional Ethics in Engineering": { attended: 0, total: 0 }
 },
 
-"12303039": {
-  "Power System Analysis": { attended: 0, total: 0 },
-  "Electrical and Electronics Measurements": { attended: 0, total: 0 },
-  "Micro Processors and Micro Controllers": { attended: 0, total: 0 },
-  "Utilisation of Electrical Power": { attended: 0, total: 0 },
-  "Advanced Control System": { attended: 0, total: 0 },
-  "Professional Ethics in Engineering": { attended: 0, total: 0 }
-},
+
 
 "12303040": {
   "Power System Analysis": { attended: 0, total: 0 },
